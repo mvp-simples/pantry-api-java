@@ -54,7 +54,7 @@ public class AccountService implements UserDetailsService {
         Account account = accountRepository.findByUsername(username).orElseThrow(() -> new UsernameNotFoundException("Account not found"));;
 
         return org.springframework.security.core.userdetails.User.builder()
-                .username(account.getUserName())
+                .username(account.getUsername())
                 .password(account.getPassword())
                 .roles("USER") // Pode ser "ADMIN" também, se quiser mais tarde
                 .build();

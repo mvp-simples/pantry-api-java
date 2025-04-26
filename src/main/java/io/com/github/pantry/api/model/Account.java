@@ -13,7 +13,7 @@ public class Account {
 
     private String email;
 
-    private String userName;
+    private String username;
 
     private String password;
 
